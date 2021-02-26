@@ -1,18 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './friendList.module.css';
 
-
-const FriendListItem = ({ avatar, name, isOnline }) => (
-    <li className="item">
-        <span className="status">{isOnline}</span>
-        <img className="avatar" src={avatar} alt={name} width="48" />
-        <p className="name">{name}</p>
-    </li>
+const FriendListItem = ({avatar, name, isOnline }) => (
+  <li className={styles.friendListItem}>
+    <span className={isOnline ? styles.statusOnline : styles.statusOffline}>{isOnline}</span>
+    <img className={styles.avatar} src={avatar} alt={name} />
+    <p className={styles.name}>{name}</p>
+  </li>
 );
 
 FriendListItem.propTypes = {
   bookfriend: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    avatar: PropTypes.string,
     name: PropTypes.string,
+    isOnline: PropTypes.bool,
   }),
 };
 

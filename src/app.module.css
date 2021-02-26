@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(216, 222, 233);
+}
+
+ul {
+    list-style: none;
+}
+
+.app {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

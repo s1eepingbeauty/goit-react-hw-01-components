@@ -1,32 +1,18 @@
 import React from 'react';
 import FriendListItem from './FriendListItem';
-import PropTypes from 'prop-types';
-
+import styles from './friendList.module.css';
 
 const FriendList = ({ friends }) => (
-    <ul>
-        {friends.map((friend) => (
-            <FriendListItem
-                key={friend.id}
-                avatar={friend.avatar}
-                name={friend.name}
-                isOnline={friend.isOnline}
-            />
-        ))}
+    <ul className={styles.friendList}>
+      {friends.map((friend) => (
+        <FriendListItem
+          key={friend.id}
+          avatar={friend.avatar}
+          name={friend.name}
+          isOnline={friend.isOnline}
+        />
+      ))}
     </ul>
-);
-
-FriendList.propTypes = {
-  friends: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string,
-    }),
-  ),
-};
-
-FriendList.defaultProps = {
-  friends: [],
-};
+  );
 
 export default FriendList;
