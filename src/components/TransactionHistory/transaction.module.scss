@@ -18,12 +18,14 @@ th {
 tbody {
     color: grey;
 }
-.transaction:nth-child(even) {
-    background-color: rgb(159, 189, 245);
-}
 
-.transaction td {
-    padding: 10px;
+.transaction {
+    & td {
+        padding: 10px;
+    }
+    &:nth-child(even) {
+        background-color: rgb(159, 189, 245);
+    }
 }
 
 .type {

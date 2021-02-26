@@ -1,6 +1,6 @@
 import React from 'react';
 import FriendListItem from './FriendListItem';
-import styles from './friendList.module.css';
+import styles from './friendList.module.scss';
 
 const FriendList = ({ friends }) => (
     <ul className={styles.friendList}>
